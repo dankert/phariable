@@ -1,7 +1,7 @@
 <?php
 
 
-namespace util\text\variables;
+namespace phariable;
 
 /**
  * VariableResolver for resolving variables in strings and arrays.

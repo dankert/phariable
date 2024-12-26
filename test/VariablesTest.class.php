@@ -1,6 +1,5 @@
 <?php
 
-namespace util\text\variables;
 
 use util\test\TestCase;
 
@@ -29,7 +28,7 @@ SRC;
 	 */
 	public function testNamespaced() {
 
-		$resolver = new VariableResolver();
+		$resolver = new \phariable\VariableResolver();
 		$resolver->addDefaultResolver( function($key) { return 'default'; } );
 		$resolver->addResolver( 'name', function($key) { return 'me'; } );
 		$resolver->addResolver( 'cms', function($key) { return 'orcms'; } );
@@ -41,7 +40,7 @@ SRC;
 
 	public function testSpecials() {
 
-		$resolver = new VariableResolver();
+		$resolver = new \phariable\VariableResolver();
 		$resolver->addDefaultResolver( ['0','1','2',''=>'space','name'=>'name'] );
 
 		$resolver->marker = '';
